@@ -1,0 +1,143 @@
+{
+  "header" : {
+    "dataModelVersion" : "2"
+  },
+  "content" : {
+    "componentType" : "PROCESS_GROUP",
+    "connections" : [ {
+      "backPressureDataSizeThreshold" : "10000 B",
+      "backPressureObjectThreshold" : 0,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "groupId" : "2930b414-d764-4a20-8a02-6606c6e3eb04",
+        "id" : "debdae21-83bb-3ee3-8139-45f23d2d20d7",
+        "name" : "debdae21-83bb-3ee3-8139-45f23d2d20d7",
+        "type" : "REMOTE_INPUT_PORT"
+      },
+      "flowFileExpiration" : "60 seconds",
+      "groupIdentifier" : "a85f4f8d-7720-46e9-ac42-baa987a5b405",
+      "identifier" : "b25c9889-804e-44eb-a2dd-80696e78bd44",
+      "labelIndex" : 1,
+      "name" : "",
+      "position" : {
+        "x" : 0.0,
+        "y" : 0.0
+      },
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "groupId" : "a85f4f8d-7720-46e9-ac42-baa987a5b405",
+        "id" : "c5577abe-adad-414d-8c2d-31888ef94123",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    } ],
+    "controllerServices" : [ ],
+    "funnels" : [ ],
+    "identifier" : "a85f4f8d-7720-46e9-ac42-baa987a5b405",
+    "inputPorts" : [ ],
+    "labels" : [ ],
+    "name" : "root",
+    "outputPorts" : [ ],
+    "processGroups" : [ ],
+    "processors" : [ {
+      "autoTerminatedRelationships" : [ ],
+      "bundle" : {
+        "artifact" : "minifi-standard-nar",
+        "group" : "org.apache.nifi.minifi",
+        "version" : "0.6.0.1.0.0.0-54"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "groupIdentifier" : "a85f4f8d-7720-46e9-ac42-baa987a5b405",
+      "identifier" : "c5577abe-adad-414d-8c2d-31888ef94123",
+      "name" : "GenerateFlowFile",
+      "penaltyDuration" : "0 ms",
+      "position" : {
+        "x" : 111.0,
+        "y" : 114.0
+      },
+      "properties" : {
+        "character-set" : "UTF-8",
+        "File Size" : "0B",
+        "generate-ff-custom-text" : "{\"test\": \"sunman\"}",
+        "Batch Size" : "1",
+        "Unique FlowFiles" : "false",
+        "Data Format" : "Text"
+      },
+      "propertyDescriptors" : {
+        "character-set" : {
+          "displayName" : "Character Set",
+          "identifiesControllerService" : false,
+          "name" : "character-set",
+          "sensitive" : false
+        },
+        "File Size" : {
+          "displayName" : "File Size",
+          "identifiesControllerService" : false,
+          "name" : "File Size",
+          "sensitive" : false
+        },
+        "generate-ff-custom-text" : {
+          "displayName" : "Custom Text",
+          "identifiesControllerService" : false,
+          "name" : "generate-ff-custom-text",
+          "sensitive" : false
+        },
+        "Batch Size" : {
+          "displayName" : "Batch Size",
+          "identifiesControllerService" : false,
+          "name" : "Batch Size",
+          "sensitive" : false
+        },
+        "Unique FlowFiles" : {
+          "displayName" : "Unique FlowFiles",
+          "identifiesControllerService" : false,
+          "name" : "Unique FlowFiles",
+          "sensitive" : false
+        },
+        "Data Format" : {
+          "displayName" : "Data Format",
+          "identifiesControllerService" : false,
+          "name" : "Data Format",
+          "sensitive" : false
+        }
+      },
+      "runDurationMillis" : 0,
+      "schedulingPeriod" : "20 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.GenerateFlowFile",
+      "yieldDuration" : "0 ms"
+    } ],
+    "remoteProcessGroups" : [ {
+      "communicationsTimeout" : "30 secs",
+      "componentType" : "REMOTE_PROCESS_GROUP",
+      "groupIdentifier" : "a85f4f8d-7720-46e9-ac42-baa987a5b405",
+      "identifier" : "2930b414-d764-4a20-8a02-6606c6e3eb04",
+      "inputPorts" : [ {
+        "componentType" : "REMOTE_INPUT_PORT",
+        "groupIdentifier" : "a85f4f8d-7720-46e9-ac42-baa987a5b405",
+        "identifier" : "e6a394ff-a853-4f30-a28a-2c5ffa7fafaf",
+        "name" : "debdae21-83bb-3ee3-8139-45f23d2d20d7",
+        "remoteGroupId" : "2930b414-d764-4a20-8a02-6606c6e3eb04",
+        "targetId" : "debdae21-83bb-3ee3-8139-45f23d2d20d7"
+      } ],
+      "localNetworkInterface" : "",
+      "name" : "http://104.43.143.220:9090/nifi",
+      "outputPorts" : [ ],
+      "position" : {
+        "x" : 458.0,
+        "y" : 127.0
+      },
+      "proxyHost" : "",
+      "targetUri" : "http://104.43.143.220:9090/nifi",
+      "targetUris" : "http://104.43.143.220:9090/nifi",
+      "transportProtocol" : "RAW",
+      "yieldDuration" : "10 sec"
+    } ],
+    "variables" : { }
+  }
+}
