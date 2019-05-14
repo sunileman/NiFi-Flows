@@ -66,6 +66,33 @@
       "componentType" : "CONNECTION",
       "destination" : {
         "groupId" : "a85f4f8d-7720-46e9-ac42-baa987a5b405",
+        "id" : "d3bd4fce-c3b1-427e-9900-07ee319b7955",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "60 seconds",
+      "groupIdentifier" : "a85f4f8d-7720-46e9-ac42-baa987a5b405",
+      "identifier" : "6d9a7907-3295-413a-81f7-9c6c51f47c6c",
+      "labelIndex" : 1,
+      "name" : "",
+      "position" : {
+        "x" : 0.0,
+        "y" : 0.0
+      },
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "groupId" : "a85f4f8d-7720-46e9-ac42-baa987a5b405",
+        "id" : "8c67dd40-8716-459d-8e95-390d0b002be6",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "10000 B",
+      "backPressureObjectThreshold" : 0,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "groupId" : "a85f4f8d-7720-46e9-ac42-baa987a5b405",
         "id" : "9a76e7b0-3eda-4a0e-ba6e-1c7ba9be6b3c",
         "type" : "PROCESSOR"
       },
@@ -166,6 +193,33 @@
       "source" : {
         "groupId" : "a85f4f8d-7720-46e9-ac42-baa987a5b405",
         "id" : "89237b5b-72da-4cbe-8807-5db2fcd82912",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "10000 B",
+      "backPressureObjectThreshold" : 0,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "groupId" : "a85f4f8d-7720-46e9-ac42-baa987a5b405",
+        "id" : "8c67dd40-8716-459d-8e95-390d0b002be6",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "60 seconds",
+      "groupIdentifier" : "a85f4f8d-7720-46e9-ac42-baa987a5b405",
+      "identifier" : "447b507c-be83-4115-87e0-3f02aaa96f2f",
+      "labelIndex" : 1,
+      "name" : "",
+      "position" : {
+        "x" : 0.0,
+        "y" : 0.0
+      },
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "groupId" : "a85f4f8d-7720-46e9-ac42-baa987a5b405",
+        "id" : "6ee8b036-5c8b-4eb3-9960-08a71ae2fe9e",
         "type" : "PROCESSOR"
       },
       "zIndex" : 0
@@ -578,6 +632,53 @@
     }, {
       "autoTerminatedRelationships" : [ ],
       "bundle" : {
+        "artifact" : "minifi-update-attribute-nar",
+        "group" : "org.apache.nifi.minifi",
+        "version" : "0.6.0.1.0.0.0-54"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 10,
+      "groupIdentifier" : "a85f4f8d-7720-46e9-ac42-baa987a5b405",
+      "identifier" : "8c67dd40-8716-459d-8e95-390d0b002be6",
+      "name" : "UpdateAttribute",
+      "penaltyDuration" : "0 ms",
+      "position" : {
+        "x" : 611.0,
+        "y" : 131.0
+      },
+      "properties" : {
+        "Store State" : "Do not store state"
+      },
+      "propertyDescriptors" : {
+        "Delete Attributes Expression" : {
+          "displayName" : "Delete Attributes Expression",
+          "identifiesControllerService" : false,
+          "name" : "Delete Attributes Expression",
+          "sensitive" : false
+        },
+        "Store State" : {
+          "displayName" : "Store State",
+          "identifiesControllerService" : false,
+          "name" : "Store State",
+          "sensitive" : false
+        },
+        "Stateful Variables Initial Value" : {
+          "displayName" : "Stateful Variables Initial Value",
+          "identifiesControllerService" : false,
+          "name" : "Stateful Variables Initial Value",
+          "sensitive" : false
+        }
+      },
+      "runDurationMillis" : 0,
+      "schedulingPeriod" : "0 ms",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
+      "yieldDuration" : "0 ms"
+    }, {
+      "autoTerminatedRelationships" : [ ],
+      "bundle" : {
         "artifact" : "minifi-standard-nar",
         "group" : "org.apache.nifi.minifi",
         "version" : "0.6.0.1.0.0.0-54"
@@ -694,6 +795,47 @@
       "schedulingStrategy" : "TIMER_DRIVEN",
       "style" : { },
       "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
+      "yieldDuration" : "0 ms"
+    }, {
+      "autoTerminatedRelationships" : [ "success", "failure" ],
+      "bundle" : {
+        "artifact" : "minifi-standard-nar",
+        "group" : "org.apache.nifi.minifi",
+        "version" : "0.6.0.1.0.0.0-54"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 10,
+      "groupIdentifier" : "a85f4f8d-7720-46e9-ac42-baa987a5b405",
+      "identifier" : "d3bd4fce-c3b1-427e-9900-07ee319b7955",
+      "name" : "HandleHttpResponse",
+      "penaltyDuration" : "0 ms",
+      "position" : {
+        "x" : 861.0,
+        "y" : 134.0
+      },
+      "properties" : {
+        "HTTP Status Code" : "200"
+      },
+      "propertyDescriptors" : {
+        "HTTP Context Map" : {
+          "displayName" : "HTTP Context Map",
+          "identifiesControllerService" : true,
+          "name" : "HTTP Context Map",
+          "sensitive" : false
+        },
+        "HTTP Status Code" : {
+          "displayName" : "HTTP Status Code",
+          "identifiesControllerService" : false,
+          "name" : "HTTP Status Code",
+          "sensitive" : false
+        }
+      },
+      "runDurationMillis" : 0,
+      "schedulingPeriod" : "0 ms",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.HandleHttpResponse",
       "yieldDuration" : "0 ms"
     }, {
       "autoTerminatedRelationships" : [ ],
@@ -859,6 +1001,148 @@
       "schedulingStrategy" : "TIMER_DRIVEN",
       "style" : { },
       "type" : "org.apache.nifi.processors.standard.ReplaceText",
+      "yieldDuration" : "0 ms"
+    }, {
+      "autoTerminatedRelationships" : [ ],
+      "bundle" : {
+        "artifact" : "minifi-standard-nar",
+        "group" : "org.apache.nifi.minifi",
+        "version" : "0.6.0.1.0.0.0-54"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "groupIdentifier" : "a85f4f8d-7720-46e9-ac42-baa987a5b405",
+      "identifier" : "6ee8b036-5c8b-4eb3-9960-08a71ae2fe9e",
+      "name" : "HandleHttpRequest",
+      "penaltyDuration" : "0 ms",
+      "position" : {
+        "x" : 342.0,
+        "y" : 121.0
+      },
+      "properties" : {
+        "multipart-request-max-size" : "1 MB",
+        "Allow POST" : "true",
+        "Default URL Character Set" : "UTF-8",
+        "Allow DELETE" : "true",
+        "container-queue-size" : "50",
+        "multipart-read-buffer-size" : "512 KB",
+        "Allow OPTIONS" : "false",
+        "Allow GET" : "true",
+        "Allow HEAD" : "false",
+        "Listening Port" : "8011",
+        "Client Authentication" : "No Authentication",
+        "Allow PUT" : "true"
+      },
+      "propertyDescriptors" : {
+        "multipart-request-max-size" : {
+          "displayName" : "Multipart Request Max Size",
+          "identifiesControllerService" : false,
+          "name" : "multipart-request-max-size",
+          "sensitive" : false
+        },
+        "Allow POST" : {
+          "displayName" : "Allow POST",
+          "identifiesControllerService" : false,
+          "name" : "Allow POST",
+          "sensitive" : false
+        },
+        "Hostname" : {
+          "displayName" : "Hostname",
+          "identifiesControllerService" : false,
+          "name" : "Hostname",
+          "sensitive" : false
+        },
+        "Default URL Character Set" : {
+          "displayName" : "Default URL Character Set",
+          "identifiesControllerService" : false,
+          "name" : "Default URL Character Set",
+          "sensitive" : false
+        },
+        "Allow DELETE" : {
+          "displayName" : "Allow DELETE",
+          "identifiesControllerService" : false,
+          "name" : "Allow DELETE",
+          "sensitive" : false
+        },
+        "Additional HTTP Methods" : {
+          "displayName" : "Additional HTTP Methods",
+          "identifiesControllerService" : false,
+          "name" : "Additional HTTP Methods",
+          "sensitive" : false
+        },
+        "container-queue-size" : {
+          "displayName" : "Container Queue Size",
+          "identifiesControllerService" : false,
+          "name" : "container-queue-size",
+          "sensitive" : false
+        },
+        "HTTP Context Map" : {
+          "displayName" : "HTTP Context Map",
+          "identifiesControllerService" : true,
+          "name" : "HTTP Context Map",
+          "sensitive" : false
+        },
+        "multipart-read-buffer-size" : {
+          "displayName" : "Multipart Read Buffer Size",
+          "identifiesControllerService" : false,
+          "name" : "multipart-read-buffer-size",
+          "sensitive" : false
+        },
+        "SSL Context Service" : {
+          "displayName" : "SSL Context Service",
+          "identifiesControllerService" : true,
+          "name" : "SSL Context Service",
+          "sensitive" : false
+        },
+        "Allow OPTIONS" : {
+          "displayName" : "Allow OPTIONS",
+          "identifiesControllerService" : false,
+          "name" : "Allow OPTIONS",
+          "sensitive" : false
+        },
+        "Allowed Paths" : {
+          "displayName" : "Allowed Paths",
+          "identifiesControllerService" : false,
+          "name" : "Allowed Paths",
+          "sensitive" : false
+        },
+        "Allow GET" : {
+          "displayName" : "Allow GET",
+          "identifiesControllerService" : false,
+          "name" : "Allow GET",
+          "sensitive" : false
+        },
+        "Allow HEAD" : {
+          "displayName" : "Allow HEAD",
+          "identifiesControllerService" : false,
+          "name" : "Allow HEAD",
+          "sensitive" : false
+        },
+        "Listening Port" : {
+          "displayName" : "Listening Port",
+          "identifiesControllerService" : false,
+          "name" : "Listening Port",
+          "sensitive" : false
+        },
+        "Client Authentication" : {
+          "displayName" : "Client Authentication",
+          "identifiesControllerService" : false,
+          "name" : "Client Authentication",
+          "sensitive" : false
+        },
+        "Allow PUT" : {
+          "displayName" : "Allow PUT",
+          "identifiesControllerService" : false,
+          "name" : "Allow PUT",
+          "sensitive" : false
+        }
+      },
+      "runDurationMillis" : 0,
+      "schedulingPeriod" : "0 ms",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.HandleHttpRequest",
       "yieldDuration" : "0 ms"
     }, {
       "autoTerminatedRelationships" : [ "failure" ],
