@@ -19,7 +19,7 @@
       "groupIdentifier" : "a85f4f8d-7720-46e9-ac42-baa987a5b405",
       "identifier" : "b25c9889-804e-44eb-a2dd-80696e78bd44",
       "labelIndex" : 1,
-      "name" : "",
+      "name" : "GenerateFlowFile/success/debdae21-83bb-3ee3-8139-45f23d2d20d7",
       "position" : {
         "x" : 0.0,
         "y" : 0.0
@@ -29,6 +29,7 @@
       "source" : {
         "groupId" : "a85f4f8d-7720-46e9-ac42-baa987a5b405",
         "id" : "c5577abe-adad-414d-8c2d-31888ef94123",
+        "name" : "GenerateFlowFile",
         "type" : "PROCESSOR"
       },
       "zIndex" : 0
@@ -129,7 +130,7 @@
       "name" : "http://104.43.143.220:9090/nifi",
       "outputPorts" : [ ],
       "position" : {
-        "x" : 458.0,
+        "x" : 539.0,
         "y" : 127.0
       },
       "proxyHost" : "",
