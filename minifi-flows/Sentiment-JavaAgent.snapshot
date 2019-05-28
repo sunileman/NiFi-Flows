@@ -121,6 +121,34 @@
       "bends" : [ ],
       "componentType" : "CONNECTION",
       "destination" : {
+        "groupId" : "2930b414-d764-4a20-8a02-6606c6e3eb04",
+        "id" : "debdae21-83bb-3ee3-8139-45f23d2d20d7",
+        "name" : "debdae21-83bb-3ee3-8139-45f23d2d20d7",
+        "type" : "REMOTE_INPUT_PORT"
+      },
+      "flowFileExpiration" : "60 seconds",
+      "groupIdentifier" : "a85f4f8d-7720-46e9-ac42-baa987a5b405",
+      "identifier" : "2fb6ce45-3041-426c-b77a-f9eb828b2303",
+      "labelIndex" : 1,
+      "name" : "",
+      "position" : {
+        "x" : 0.0,
+        "y" : 0.0
+      },
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "groupId" : "a85f4f8d-7720-46e9-ac42-baa987a5b405",
+        "id" : "c561e5ab-af0c-45b5-91ac-456292dd73a8",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "10000 B",
+      "backPressureObjectThreshold" : 0,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
         "groupId" : "a85f4f8d-7720-46e9-ac42-baa987a5b405",
         "id" : "89237b5b-72da-4cbe-8807-5db2fcd82912",
         "type" : "PROCESSOR"
@@ -859,6 +887,76 @@
       "schedulingStrategy" : "TIMER_DRIVEN",
       "style" : { },
       "type" : "org.apache.nifi.processors.standard.ReplaceText",
+      "yieldDuration" : "0 ms"
+    }, {
+      "autoTerminatedRelationships" : [ ],
+      "bundle" : {
+        "artifact" : "minifi-standard-nar",
+        "group" : "org.apache.nifi.minifi",
+        "version" : "0.6.0.1.0.0.0-54"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "groupIdentifier" : "a85f4f8d-7720-46e9-ac42-baa987a5b405",
+      "identifier" : "c561e5ab-af0c-45b5-91ac-456292dd73a8",
+      "name" : "Generate RPM Reading",
+      "penaltyDuration" : "0 ms",
+      "position" : {
+        "x" : 816.5913339001431,
+        "y" : -833.8587632231113
+      },
+      "properties" : {
+        "character-set" : "UTF-8",
+        "File Size" : "0B",
+        "generate-ff-custom-text" : "RPM: 5500",
+        "Batch Size" : "1",
+        "Unique FlowFiles" : "false",
+        "Data Format" : "Text"
+      },
+      "propertyDescriptors" : {
+        "character-set" : {
+          "displayName" : "Character Set",
+          "identifiesControllerService" : false,
+          "name" : "character-set",
+          "sensitive" : false
+        },
+        "File Size" : {
+          "displayName" : "File Size",
+          "identifiesControllerService" : false,
+          "name" : "File Size",
+          "sensitive" : false
+        },
+        "generate-ff-custom-text" : {
+          "displayName" : "Custom Text",
+          "identifiesControllerService" : false,
+          "name" : "generate-ff-custom-text",
+          "sensitive" : false
+        },
+        "Batch Size" : {
+          "displayName" : "Batch Size",
+          "identifiesControllerService" : false,
+          "name" : "Batch Size",
+          "sensitive" : false
+        },
+        "Unique FlowFiles" : {
+          "displayName" : "Unique FlowFiles",
+          "identifiesControllerService" : false,
+          "name" : "Unique FlowFiles",
+          "sensitive" : false
+        },
+        "Data Format" : {
+          "displayName" : "Data Format",
+          "identifiesControllerService" : false,
+          "name" : "Data Format",
+          "sensitive" : false
+        }
+      },
+      "runDurationMillis" : 0,
+      "schedulingPeriod" : "30 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.GenerateFlowFile",
       "yieldDuration" : "0 ms"
     }, {
       "autoTerminatedRelationships" : [ "failure" ],
