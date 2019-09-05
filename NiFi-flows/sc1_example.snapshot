@@ -40,8 +40,8 @@
       "destination" : {
         "comments" : "",
         "groupId" : "d6af0dd7-fef6-388f-aa0c-1a16974e118e",
-        "id" : "40724e92-93be-36af-b23c-204333a76f8a",
-        "name" : "PutS3Object",
+        "id" : "0e21e7e0-cb31-3a7f-a166-87341c901de0",
+        "name" : "UpdateAttribute",
         "type" : "PROCESSOR"
       },
       "flowFileExpiration" : "0 sec",
@@ -216,8 +216,8 @@
       "name" : "PutS3Object",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : 1120.8584297176071,
-        "y" : 547.0371277617046
+        "x" : 1153.6549385066696,
+        "y" : 486.4895661161968
       },
       "properties" : {
         "FullControl User List" : "${s3.permissions.full.users}",
